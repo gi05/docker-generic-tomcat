@@ -3,8 +3,8 @@ FROM oberthur/docker-busybox-java:jdk8_8.45.14
 MAINTAINER Dawid Malinowski <d.malinowski@oberthur.com>
 
 ENV HOME=/opt/app
-ENV TOMCAT_MAJOR 7
-ENV TOMCAT_VERSION 7.0.62
+ENV TOMCAT_MAJOR 8
+ENV TOMCAT_VERSION 8.0.23
 ENV CATALINA_HOME /opt/app/tomcat
 WORKDIR /opt/app
 
