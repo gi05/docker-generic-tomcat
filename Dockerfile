@@ -1,10 +1,10 @@
-FROM oberthur/docker-alpine-java:jdk8_8.45.14
+FROM oberthur/docker-alpine-java:jdk8_8.51.16
 
 MAINTAINER Dawid Malinowski <d.malinowski@oberthur.com>
 
 ENV HOME=/opt/app
 ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.0.23
+ENV TOMCAT_VERSION 8.0.24
 ENV CATALINA_HOME /opt/app/tomcat
 WORKDIR /opt/app
 
