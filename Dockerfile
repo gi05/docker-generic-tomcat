@@ -2,10 +2,11 @@ FROM oberthur/docker-ubuntu-java:jdk8_8.65.17
 
 MAINTAINER Dawid Malinowski <d.malinowski@oberthur.com>
 
-ENV HOME=/opt/app
-ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.0.28
-ENV CATALINA_HOME /opt/app/tomcat
+ENV HOME=/opt/app \
+    TOMCAT_MAJOR=8 \
+    TOMCAT_VERSION=8.0.28 \
+    CATALINA_HOME=/opt/app/tomcat
+
 WORKDIR /opt/app
 
 RUN curl -L -O http://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz \
