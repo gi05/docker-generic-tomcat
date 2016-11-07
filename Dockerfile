@@ -9,7 +9,7 @@ ENV HOME=/opt/app \
 
 WORKDIR /opt/app
 
-RUN curl -L -O http://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz \
+RUN curl -L -O http://archive.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz \
     && gunzip apache-tomcat-$TOMCAT_VERSION.tar.gz \
     && tar -xf apache-tomcat-$TOMCAT_VERSION.tar -C /opt/app \
     && rm apache-tomcat-$TOMCAT_VERSION/bin/*.bat \
