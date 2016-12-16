@@ -18,4 +18,4 @@ RUN curl -L -O http://archive.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMC
 
 
 EXPOSE 8080
-CMD exec java -Djava.util.logging.config.file=$CATALINA_HOME/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.endorsed.dirs=$CATALINA_HOME/endorsed -classpath $CATALINA_HOME/bin/bootstrap.jar:$CATALINA_HOME/bin/tomcat-juli.jar -Dcatalina.base=$CATALINA_HOME -Dcatalina.home=$CATALINA_HOME -Djava.io.tmpdir=$CATALINA_HOME/temp org.apache.catalina.startup.Bootstrap start
+CMD ["exec", "java", "-Djava.util.logging.config.file=$CATALINA_HOME/conf/logging.properties", "-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager", "-Djava.endorsed.dirs=$CATALINA_HOME/endorsed", "-classpath $CATALINA_HOME/bin/bootstrap.jar:$CATALINA_HOME/bin/tomcat-juli.jar", "-Dcatalina.base=$CATALINA_HOME", "-Dcatalina.home=$CATALINA_HOME", "-Djava.io.tmpdir=$CATALINA_HOME/temp", "org.apache.catalina.startup.Bootstrap", "start"]
