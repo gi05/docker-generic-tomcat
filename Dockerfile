@@ -4,7 +4,7 @@ MAINTAINER Dawid Malinowski <d.malinowski@oberthur.com>
 
 ENV HOME=/opt/app \
     TOMCAT_MAJOR=8 \
-    TOMCAT_VERSION=8.0.37 \
+    TOMCAT_VERSION=8.0.39 \
     CATALINA_HOME=/opt/app/tomcat
 
 WORKDIR /opt/app
