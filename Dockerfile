@@ -1,4 +1,4 @@
-FROM oberthur/docker-ubuntu-java:jdk8_8.112.15
+FROM oberthur/docker-ubuntu-java:jdk8_8.121.13
 
 MAINTAINER Dawid Malinowski <d.malinowski@oberthur.com>
 
