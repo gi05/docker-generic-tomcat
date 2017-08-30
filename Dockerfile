@@ -1,15 +1,16 @@
-FROM oberthur/docker-ubuntu-java:jdk8_8.121.13
+FROM oberthur/docker-ubuntu-java:openjdk-8u131b11_V2
 
 MAINTAINER Dawid Malinowski <d.malinowski@oberthur.com>
 
 ENV HOME=/opt/app \
     TOMCAT_MAJOR=8 \
-    TOMCAT_VERSION=8.0.39 \
+    TOMCAT_VERSION=8.5.9 \
     CATALINA_HOME=/opt/app/tomcat
 
 WORKDIR /opt/app
 
-RUN curl -L -O http://archive.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz \
+RUN apt-get update && apt-get install -y curl gzip \
+    && curl -L -O http://archive.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz \
     && gunzip apache-tomcat-$TOMCAT_VERSION.tar.gz \
     && tar -xf apache-tomcat-$TOMCAT_VERSION.tar -C /opt/app \
     && rm apache-tomcat-$TOMCAT_VERSION/bin/*.bat \
